@@ -1,5 +1,10 @@
 name: Run test playwright
-trigger: 
+
+
+trigger:
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: ubuntu-latest
