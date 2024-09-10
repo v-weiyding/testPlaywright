@@ -1,0 +1,5 @@
+# Node.js依赖
+node_modules/
+# 如果使用yarn，也需要忽略yarn.lock
+yarn.lock
+package-lock.json

@@ -1,0 +1,39 @@
+name: Run test playwright
+trigger: 
+
+pool:
+  vmImage: ubuntu-latest
+
+
+
+jobs:
+  - job: RunPlaywright
+    steps:
+      - task: UseNode@1
+        inputs:
+          version: '18.x' # string. Version. Default: 10.x.
+
+
+
+      - task: Bash@3
+        displayName: Show version
+        inputs:
+          targetType: inline
+          script: |
+
+            npm i
+
+            npx playwright install
+
+            node 1.js
+
+
+      
+
+      - task: Bash@3
+        displayName: Show version
+        inputs:
+          targetType: inline
+          script: |
+
+            cat ./1.txt
